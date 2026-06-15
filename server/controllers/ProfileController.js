@@ -17,7 +17,7 @@ class ProfileController {
             const profile = await Profile.findByPk(id);
 
             if (!profile) {
-                return res.status(404).json({ message: 'Profile not found' });
+                throw { name: 'NotFound', message: 'Profile not found' };
             }
 
             res.status(200).json(profile);
@@ -34,12 +34,53 @@ class ProfileController {
             const profile = await Profile.findByPk(id);
 
             if (!profile) {
-                return res.status(404).json({ message: 'Profile not found' });
-            } 
+                throw { name: 'NotFound', message: 'Profile not found' };
+            }
 
             profile.fullname = fullname || profile.fullname;
             profile.contactPhone = contactPhone || profile.contactPhone;
             profile.address = address || profile.address;
+
+            await profile.save();
+
+            res.status(200).json(profile);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async updateProfileStatus(req, res, next) {
+        try {
+            const { id } = req.params;
+            const { status } = req.body;
+
+            const profile = await Profile.findByPk(id);
+
+            if (!profile) {
+                throw { name: 'NotFound', message: 'Profile not found' };
+            }
+
+            profile.status = status;
+
+            await profile.save();
+
+            res.status(200).json(profile);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async deactivateProfile(req, res, next) {
+        try {
+            const { id } = req.params;
+
+            const profile = await Profile.findByPk(id);
+
+            if (!profile) {
+                throw { name: 'NotFound', message: 'Profile not found' };
+            }
+
+            profile.status = 'inactive';
 
             await profile.save();
 

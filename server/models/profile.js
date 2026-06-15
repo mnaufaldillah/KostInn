@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     isVerified: DataTypes.BOOLEAN,
     status: {
       type: DataTypes.ENUM,
-      values: ['pending', 'active', 'inactive'],
+      values: ['pending', 'active', 'occupied', 'inactive'],
       defaultValue: 'pending',
       allowNull: false
     }

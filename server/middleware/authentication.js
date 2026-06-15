@@ -1,12 +1,12 @@
 const { verifyToken } = require('../helpers/jwt');
 const { User } = require('../models');
 
-const authentication = (req, res, next) => {
+async function authentication(req, res, next) {
     try {
         const authHeader = req.headers.authorization;
 
         if (!authHeader) {
-            throw new Error('Authorization header is required');
+            throw { name: 'Unauthenticated' };
         }
 
         const token = authHeader.split(' ')[1];
@@ -16,7 +16,7 @@ const authentication = (req, res, next) => {
         const user = User.findByPk(decoded.id);
 
         if (!user) {
-            throw new Error('User not found');
+            throw { name: 'Unauthenticated' };
         }
 
         req.UserId = user.id;

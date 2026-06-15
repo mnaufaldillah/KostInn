@@ -53,6 +53,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Password cannot be empty!'
         }
       }
+    },
+    IDCardUrl: {
+      type: DataTypes.STRING
     }
   }, {
     sequelize,
@@ -61,6 +64,7 @@ module.exports = (sequelize, DataTypes) => {
 
   User.beforeCreate((instance, options) => {
     instance.password = hashPassword(instance.password);
+    instance.IDCardUrl = '';
   });
   return User;
 };
