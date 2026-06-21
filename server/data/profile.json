@@ -1,0 +1,47 @@
+[
+  {
+    "UserId": 1,
+    "fullname": "Admin KostInn",
+    "contactPhone": "081111111111",
+    "address": "Jakarta, Indonesia",
+    "role": "Admin",
+    "isVerified": true,
+    "status": "active"
+  },
+  {
+    "UserId": 2,
+    "fullname": "Muhammad Naufaldillah",
+    "contactPhone": "082222222222",
+    "address": "Surabaya, Indonesia",
+    "role": "Pencari Kost",
+    "isVerified": true,
+    "status": "active"
+  },
+  {
+    "UserId": 3,
+    "fullname": "Budi Santoso",
+    "contactPhone": "083333333333",
+    "address": "Bandung, Indonesia",
+    "role": "Pencari Kost",
+    "isVerified": false,
+    "status": "pending"
+  },
+  {
+    "UserId": 4,
+    "fullname": "Siti Aminah",
+    "contactPhone": "084444444444",
+    "address": "Malang, Indonesia",
+    "role": "Penyewa Kost",
+    "isVerified": true,
+    "status": "active"
+  },
+  {
+    "UserId": 5,
+    "fullname": "Andi Wijaya",
+    "contactPhone": "085555555555",
+    "address": "Yogyakarta, Indonesia",
+    "role": "Penyewa Kost",
+    "isVerified": false,
+    "status": "pending"
+  }
+]

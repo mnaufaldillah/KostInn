@@ -24,12 +24,28 @@ module.exports = (sequelize, DataTypes) => {
     fullname: DataTypes.STRING,
     contactPhone: DataTypes.STRING,
     address: DataTypes.STRING,
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'Pencari Kost',
+      validate: {
+        isIn: {
+          args: [['Pencari Kost', 'Penyewa Kost', 'Admin']],
+          msg: 'Role must be Pencari Kost, Penyewa Kost, or Admin'
+        }
+      }
+    },
     isVerified: DataTypes.BOOLEAN,
     status: {
-      type: DataTypes.ENUM,
-      values: ['pending', 'active', 'occupied', 'inactive'],
+      type: DataTypes.STRING,
+      allowNull: false,
       defaultValue: 'pending',
-      allowNull: false
+      validate: {
+        isIn: {
+          args: [['pending', 'active', 'occupied', 'inactive']],
+          msg: 'Status must be pending, active, occupied, or inactive'
+        }
+      }
     }
   }, {
     sequelize,

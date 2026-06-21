@@ -56,15 +56,27 @@ module.exports = (sequelize, DataTypes) => {
     },
     IDCardUrl: {
       type: DataTypes.STRING
+    },
+    otpCode: {
+      type: DataTypes.STRING
+    },
+    otpExpires: {
+      type: DataTypes.DATE
     }
   }, {
     sequelize,
     modelName: 'User',
   });
 
-  User.beforeCreate((instance, options) => {
-    instance.password = hashPassword(instance.password);
+  User.beforeCreate((instance) => {
     instance.IDCardUrl = '';
+  });
+
+  // ponytail: hash on create AND change; beforeCreate used to hash too → double-hashed passwords (login failed)
+  User.beforeSave((instance) => {
+    if (instance.changed('password')) {
+      instance.password = hashPassword(instance.password);
+    }
   });
   return User;
 };

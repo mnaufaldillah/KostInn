@@ -13,7 +13,7 @@ async function authentication(req, res, next) {
 
         const decoded = verifyToken(token);
 
-        const user = User.findByPk(decoded.id);
+        const user = await User.findByPk(decoded.id);
 
         if (!user) {
             throw { name: 'Unauthenticated' };

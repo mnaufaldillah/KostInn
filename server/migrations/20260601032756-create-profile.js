@@ -25,8 +25,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       status: {
-        type: Sequelize.ENUM,
-        values: ['pending', 'active', 'occupied', 'inactive'],
+        type: Sequelize.STRING,
         defaultValue: 'pending',
         allowNull: false
       },

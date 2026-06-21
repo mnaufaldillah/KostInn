@@ -1,0 +1,27 @@
+[
+  {
+    "email": "admin@kostinn.test",
+    "password": "password123",
+    "IDCardUrl": "https://mockimage.com/idcard/admin.png"
+  },
+  {
+    "email": "naufal@kostinn.test",
+    "password": "password123",
+    "IDCardUrl": "https://mockimage.com/idcard/naufal.png"
+  },
+  {
+    "email": "budi@kostinn.test",
+    "password": "password123",
+    "IDCardUrl": "https://mockimage.com/idcard/budi.png"
+  },
+  {
+    "email": "siti@kostinn.test",
+    "password": "password123",
+    "IDCardUrl": "https://mockimage.com/idcard/siti.png"
+  },
+  {
+    "email": "andi@kostinn.test",
+    "password": "password123",
+    "IDCardUrl": "https://mockimage.com/idcard/andi.png"
+  }
+]

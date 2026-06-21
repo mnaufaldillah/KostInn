@@ -1,9 +1,12 @@
-const { Profile } = require('../models');
+const { Profile, User } = require('../models');
 
 class ProfileController {
     static async getProfile(req, res, next) {
         try {
-            const profiles = await Profile.findAll();
+            const profiles = await Profile.findAll({
+                include: { model: User, attributes: ['email'] },
+                order: [['id', 'ASC']]
+            });
 
             res.status(200).json(profiles);
         } catch (error) {
@@ -29,7 +32,7 @@ class ProfileController {
     static async updateProfile(req, res, next) {
         try {
             const { id } = req.params;
-            const { fullname, contactPhone, address, isVerified, status } = req.body;
+            const { fullname, contactPhone, address } = req.body;
 
             const profile = await Profile.findByPk(id);
 

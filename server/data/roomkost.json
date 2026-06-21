@@ -1,0 +1,37 @@
+[
+  {
+    "roomNum": 101,
+    "roomPrice": "850000",
+    "status": "available",
+    "roomFacilities": "AC, WiFi, kamar mandi dalam, kasur",
+    "roomPhotoUrl": "https://mockimage.com/room/101.png"
+  },
+  {
+    "roomNum": 102,
+    "roomPrice": "1200000",
+    "status": "occupied",
+    "roomFacilities": "AC, WiFi, kamar mandi dalam, dapur, meja belajar",
+    "roomPhotoUrl": "https://mockimage.com/room/102.png"
+  },
+  {
+    "roomNum": 103,
+    "roomPrice": "700000",
+    "status": "available",
+    "roomFacilities": "WiFi, kamar mandi luar, kasur",
+    "roomPhotoUrl": "https://mockimage.com/room/103.png"
+  },
+  {
+    "roomNum": 201,
+    "roomPrice": "1500000",
+    "status": "occupied",
+    "roomFacilities": "AC, WiFi, kamar mandi dalam, balkon, kulkas",
+    "roomPhotoUrl": "https://mockimage.com/room/201.png"
+  },
+  {
+    "roomNum": 202,
+    "roomPrice": "950000",
+    "status": "available",
+    "roomFacilities": "AC, WiFi, kamar mandi dalam, lemari",
+    "roomPhotoUrl": "https://mockimage.com/room/202.png"
+  }
+]

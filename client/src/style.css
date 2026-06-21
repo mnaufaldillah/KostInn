@@ -1,0 +1,411 @@
+/* ===== NavBar ===== */
+.ki-navbar {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.ki-nav-actions {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+/* ===== Homepage hero ===== */
+.ki-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.ki-hero-brand {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.ki-hero-sub {
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.ki-hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===== Register page ===== */
+.ki-register-layout {
+  min-height: calc(100vh - 56px);
+  display: flex;
+}
+
+.ki-register-left {
+  flex: 1;
+  background-color: #e9ecef;
+}
+
+.ki-register-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background-color: #ffffff;
+}
+
+.ki-register-card {
+  max-width: 480px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* ===== Form fields ===== */
+.ki-field {
+  margin-bottom: 1rem;
+}
+
+.ki-label {
+  font-weight: 600;
+}
+
+.ki-input {
+  background-color: #e9ecef;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.ki-input.is-error {
+  border-color: #dc3545;
+}
+
+.ki-error {
+  color: #dc3545;
+}
+
+.ki-form-error {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.ki-role-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ki-role-btn {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 6px;
+}
+
+.ki-role-btn.is-active {
+  background-color: #e9ecef;
+}
+
+.ki-terms {
+  border-color: #000000;
+}
+
+/* ===== Auth / OTP page ===== */
+.ki-auth-page {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+  padding: 24px;
+}
+
+.ki-auth-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ki-otp-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.ki-otp-input {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  min-width: 0;
+}
+
+/* ===== Upload ID Card ===== */
+.ki-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  padding: 40px 24px;
+  border: 2px dashed #000000;
+  border-radius: 12px;
+  background-color: #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.ki-dropzone:hover {
+  background-color: #dee2e6;
+}
+
+.ki-dropzone.is-error {
+  border-color: #dc3545;
+}
+
+.ki-dropzone-icon {
+  font-size: 2rem;
+}
+
+.ki-file-input {
+  display: none;
+}
+
+.ki-id-preview {
+  text-align: center;
+}
+
+.ki-id-image {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  object-fit: contain;
+}
+
+.ki-id-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px;
+  background-color: #e9ecef;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* ===== Dashboard / Sidebar ===== */
+.ki-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.ki-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+
+.ki-sidebar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.ki-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.ki-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.ki-sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.ki-sidebar-link.is-active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.ki-sidebar-icon {
+  font-size: 1.1rem;
+}
+
+.ki-sidebar-logout {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.ki-sidebar-logout:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.ki-dashboard-main {
+  flex: 1;
+  padding: 40px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+/* ===== Profile ===== */
+.ki-profile {
+  max-width: 560px;
+}
+
+.ki-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.ki-profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.ki-profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ki-profile-field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ki-profile-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.ki-profile-value {
+  font-size: 1rem;
+  color: #000000;
+  margin: 0;
+}
+
+.ki-profile-footer {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* ===== Tables ===== */
+.ki-table-wrap {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ki-table {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.ki-table thead th {
+  background-color: #f8f9fa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6c757d;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.ki-table tbody td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.ki-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ki-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ki-status-active {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.ki-status-done {
+  background-color: #e2e3e5;
+  color: #2b2f33;
+}
+
+/* ===== Edit panel (admin) ===== */
+.ki-edit-panel {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+
+
+
+
+
+
